@@ -1,0 +1,38 @@
+#coding=utf-8
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+    url(r'^$',views.index,name='index'),
+    url(r'^getNovelInfo$',views.getNovelInfo,name='getNovelsInfo'),
+    url(r'^getContent',views.getContent,name='getContent'),
+    url(r'^preChapter',views.preChapter,name='preChapter'),
+    url(r'^nextChapter',views.nextChapter,name='nextChapter'),
+    url(r'^indexMore',views.indexMore,name='indexMore'),
+    url(r'^search',views.search,name='search'),
+    url(r'^login',views.login,name='login'),
+    url(r'^getverificode',views.getverificode,name='getverificode'),
+    url(r'^register',views.register,name='register'),
+    url(r'^collect',views.collect,name='collect'),
+    url(r'^logout',views.logout,name='logout'),
+    url(r'^mycollections',views.mycollections,name='mycollections'),
+    url(r'^passwordChange',views.passwordChange,name='passwordChange'),
+    url(r'^rank',views.rank,name='rank'),
+    url(r'^findRecommend',views.findRecommend,name='findRecommend'),
+    url(r'^findMsg',views.findMsg,name='findMsg'),
+    url(r'^findCircle',views.findCircle,name='findCircle'),
+    url(r'^pubComment',views.pubComment,name='pubComment'),
+    url(r'^getCommentReply',views.getCommentReply,name='getCommentReply'),
+    url(r'^novelCommentPraise',views.novelCommentPraise,name='novelCommentPraise'),
+    url(r'^createCircle',views.createCircle,name='createCircle'),
+    url(r'^pubPost$',views.pubPost,name='pubPost'),
+    url(r'^pubPostReply$',views.pubPostReply,name='pubPostReply'),
+    url(r'^pubPostReplyReply$',views.pubPostReplyReply,name='pubPostReplyReply'),
+    url(r'^getPostReplyReply',views.getPostReplyReply,name='getPostReplyReply'),
+    url(r'^getCircle',views.getCircle,name='getCircle'),
+    url(r'^joinCircle',views.joinCircle,name='joinCircle'),
+    url(r'^pubRecommend',views.pubRecommend,name='pubRecommend'),
+    url(r'^latest',views.latest,name='latest'),
+    url(r'^finished',views.finished,name='finished'),
+    url(r'^test',views.test,name='test'),
+    url(r'^postlayer/$',views.postlayer,name='postlayer')
+]

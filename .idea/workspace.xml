@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec8d75fa-f0ba-44f8-87ff-b720881d39fd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1643881490">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="57" />
+          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="3" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="7" />
+          <entry key="project.open.time.3" value="8" />
+          <entry key="project.open.time.4" value="7" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="59" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="43" />
+          <entry key="html" value="5" />
+          <entry key="js" value="39" />
+          <entry key="png" value="1" />
+          <entry key="psql" value="33" />
+          <entry key="py" value="104" />
+          <entry key="sql" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="43" />
+          <entry key="DBN-SQL" value="38" />
+          <entry key="HTML" value="5" />
+          <entry key="Image" value="1" />
+          <entry key="JavaScript" value="39" />
+          <entry key="Python" value="104" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="544" />
+          <entry key="css" value="237" />
+          <entry key="html" value="112" />
+          <entry key="js" value="1426" />
+          <entry key="py" value="17540" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="237" />
+          <entry key="HTML" value="112" />
+          <entry key="JavaScript" value="1426" />
+          <entry key="Python" value="18084" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Novel" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/xbiqugeSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="97" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <marker date="1559369016371" expanded="true" signature="1387:1392" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="1866:1871" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="2089:2094" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="2351:2356" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="2871:2872" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="3369:3374" ph="..." />
+                <marker date="1559369016371" expanded="true" signature="3832:3837" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="219" column="11" lean-forward="true" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+                <marker date="1559447289615" expanded="true" signature="560:561" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="1518:1519" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="4481:4482" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="4481:4486" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="5439:5444" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="6427:6432" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="7836:7837" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="7836:8247" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="8274:9261" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="10986:10991" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="11091:11096" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="11602:11607" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="18180:18185" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="18180:23519" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="19741:23519" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="21237:23334" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="21988:23334" ph="..." />
+                <marker date="1559447289615" expanded="true" signature="23153:23334" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novelweb/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="132" column="65" lean-forward="true" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3344">
+              <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/zonghengSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/defaultSpider.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiderfactory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>posi</find>
+      <find>css</find>
+      <find>.nav</find>
+      <find>nav</find>
+      <find>absolute</find>
+      <find>request.session</find>
+      <find>render</find>
+      <find>.header</find>
+      <find>logout</find>
+      <find>flicking</find>
+      <find>getchapters</find>
+      <find>more</find>
+      <find>novelinfo</find>
+      <find>save</find>
+      <find>mycol</find>
+      <find>values</find>
+      <find>time</find>
+      <find>User_Circle.objects.get</find>
+      <find>User_Circle.objects.</find>
+      <find>HttpResponseRedirect</find>
+      <find>Redirect</find>
+      <find>search</find>
+      <find>int(</find>
+      <find>print</find>
+      <find>getall</find>
+      <find>发布成功！</find>
+      <find>messages</find>
+      <find>type</find>
+      <find>pub</find>
+      <find>def sear</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/novelweb/novelspider/spiders/xbiqugeSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelspider/spiders/zhonghengSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelspider/spiders/defaultSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelspider/spiders/zonghengSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelspider/spiderfactory.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelweb/__init__.py" />
+        <option value="$PROJECT_DIR$/novelweb/__init__.py" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/spiders/start.py" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/start.py" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/settings.py" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/items.py" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/script/m_reader.js" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/spiders/xbiquge.py" />
+        <option value="$PROJECT_DIR$/novelweb/novel/novelspider/spiderfactory.py" />
+        <option value="$PROJECT_DIR$/novelweb/novel/novelspider/spiders/xbiqugeSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/css/style.css" />
+        <option value="$PROJECT_DIR$/novelweb/novel/novelspider/spiders/zonghengSpider.py" />
+        <option value="$PROJECT_DIR$/novelweb/static/layui/css/modules/layer/default/layer.css" />
+        <option value="$PROJECT_DIR$/novelweb/novel/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelweb/urls.py" />
+        <option value="$PROJECT_DIR$/novelweb/static/layui/css/layui.css" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/script/IndexTouchSlider.js" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/script/main.js" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/css/global.css" />
+        <option value="$PROJECT_DIR$/novelscrapy/novelscrapy/pipelines.py" />
+        <option value="$PROJECT_DIR$/novelweb/templates/novel/postlayer.html" />
+        <option value="$PROJECT_DIR$/novelweb/static/novel/script/common.js" />
+        <option value="$PROJECT_DIR$/novelweb/novel/models.py" />
+        <option value="$PROJECT_DIR$/novelweb/novel/urls.py" />
+        <option value="$PROJECT_DIR$/novelweb/novel/views.py" />
+        <option value="$PROJECT_DIR$/novelweb/novelweb/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="380" />
+    <option name="y" value="200" />
+    <option name="width" value="1445" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelscrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelscrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="novelscrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelscrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="novelscrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="novel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="novel" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Novel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Novel" type="462c0819:PsiDirectoryNode" />
+              <item name="novelweb" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="novel" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="G:/python/comic-master" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Novel\novelscrapy\novelscrapy" />
+      <recent name="G:\Novel\novelweb\novel" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Novel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/novelscrapy/novelscrapy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/novelscrapy/novelscrapy/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec8d75fa-f0ba-44f8-87ff-b720881d39fd" name="Default Changelist" comment="" />
+      <created>1553145644771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553145644771</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49817517" visible="true" weight="0.165786" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5018248" side_tool="true" weight="0.165786" />
+      <window_info id="DB Browser" order="3" weight="0.22721268" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20933522" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.497358" visible="true" weight="0.3479491" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50264204" side_tool="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4993395" weight="0.4016973" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/novelscrapy/novelscrapy/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/test.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/templates/novel/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3842" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelscrapy/novelscrapy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1460986792/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="3628" column="8" selection-start-line="3628" selection-start-column="8" selection-end-line="3628" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/layui/layui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/layui/lay/modules/layer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/core/mail/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="370" selection-start-line="1" selection-start-column="370" selection-end-line="1" selection-end-column="370" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://72b11f13-9c45-4c85-8129-255eaa6dbed8/objects/schemas/novel/tables/user">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="0" readonly="false">
+          <columns>
+            <column name="id" position="0" visible="true" />
+            <column name="user_name" position="1" visible="true" />
+            <column name="password" position="2" visible="true" />
+            <column name="Email" position="3" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/layui/css/modules/layer/default/layer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7765" selection-start-line="1" selection-start-column="7765" selection-end-line="1" selection-end-column="7765" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/urls/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/urls/resolvers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="618" column="36" selection-start-line="618" selection-start-column="32" selection-end-line="618" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novelweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://72b11f13-9c45-4c85-8129-255eaa6dbed8/objects/schemas/mysitedb/tables/auth_user">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="0" readonly="false">
+          <columns>
+            <column name="id" position="0" visible="true" />
+            <column name="password" position="1" visible="true" />
+            <column name="last_login" position="2" visible="true" />
+            <column name="is_superuser" position="3" visible="true" />
+            <column name="username" position="4" visible="true" />
+            <column name="first_name" position="5" visible="true" />
+            <column name="last_name" position="6" visible="true" />
+            <column name="email" position="7" visible="true" />
+            <column name="is_staff" position="8" visible="true" />
+            <column name="is_active" position="9" visible="true" />
+            <column name="date_joined" position="10" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/pymysql/err.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="398" selection-start-line="398" selection-end-line="398" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://72b11f13-9c45-4c85-8129-255eaa6dbed8/objects/schemas/novel/tables/user_collections">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="0" readonly="false">
+          <columns>
+            <column name="novel_id" position="0" visible="true" />
+            <column name="user_id" position="1" visible="true" />
+            <column name="id" position="2" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/db/models/fields/related.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="783" column="47" selection-start-line="783" selection-start-column="47" selection-end-line="783" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novelweb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/domain.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="386" column="3" selection-start-line="386" selection-start-column="3" selection-end-line="386" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/toPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/TSB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/m_reader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="18" selection-end-line="196" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/jquery-1.9.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26474" selection-start-line="4" selection-start-column="26466" selection-end-line="4" selection-end-column="26474" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="21879" selection-start-line="1" selection-start-column="21879" selection-end-line="1" selection-end-column="21879" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/IndexTouchSlider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8531">
+          <caret line="449" column="88" selection-start-line="449" selection-start-column="88" selection-end-line="449" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/templates/novel/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2413">
+          <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelscrapy/novelscrapy/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelscrapy/novelscrapy/spiders/xbiquge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="93" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/templates/novel/postlayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelscrapy/novelscrapy/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Python/Lib/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="964" selection-start-line="964" selection-end-line="964" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/xbiqugeSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="97" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <marker date="1559369016371" expanded="true" signature="1387:1392" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="1866:1871" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="2089:2094" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="2351:2356" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="2871:2872" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="3369:3374" ph="..." />
+            <marker date="1559369016371" expanded="true" signature="3832:3837" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/static/novel/script/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3344">
+          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/zonghengSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiders/defaultSpider.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/novelspider/spiderfactory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novelweb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="132" column="65" lean-forward="true" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novelweb/novel/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="219" column="11" lean-forward="true" selection-start-line="219" selection-start-column="11" selection-end-line="219" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <marker date="1559447289615" expanded="true" signature="560:561" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="1518:1519" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="4481:4482" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="4481:4486" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="5439:5444" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="6427:6432" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="7836:7837" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="7836:8247" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="8274:9261" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="10986:10991" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="11091:11096" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="11602:11607" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="18180:18185" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="18180:23519" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="19741:23519" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="21237:23334" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="21988:23334" ph="..." />
+            <marker date="1559447289615" expanded="true" signature="23153:23334" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="Keywords" content="小说"/>
+    <title>小说</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link href="/static/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <script src="/static/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/novel/script/common.js"></script>
+    <script type="text/javascript" src="/static/novel/script/domain.js"></script>
+    <script type="text/javascript" src="/static/novel/script/m_reader.js?201526"></script>
+    <script type="text/javascript" src="/static/novel/script/TSB.js"></script>
+    <script type="text/javascript" src="/static/novel/script/main.js"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+        .imgBox ul li:hover {
+            box-shadow: 3px 3px 10px black;
+            transition: 0.3s;
+        }
+        .imgBox ul li {
+            transition: 0.3s;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+
+<!--head-->
+
+<div class="header">
+
+    <!--搜索-->
+    <div class="serCh" id="serCh">
+        <form id="searchForm" action="/novel/search">
+            <a href="javascript:void(0);" onClick="m_global.closed('serCh')" class="searClose"></a>
+            <input  onClick="serchAction()" class="searBtn"></input>
+            <div class="serChinputBox"><input type="search" class="searInput" placeholder="小说名或作者"
+                                              autosave="aoao.org.cn" id="searInput"></div>
+        </form>
+    </div>
+    <!--
+    <div class="messagSjr">
+        <ul class="keyTit" id="messagelist"></ul>
+        <p id="hotTit">大家都在搜:</p>
+        <ul class="tag" id="HotTag"></ul>
+    </div>
+    -->
+    <!--搜索 end-->
+
+    <!--导航入口-->
+
+    <div class="menuBar" id="menuBar">
+        <ul>
+            <li><a href="/" title="漫画">漫画</a></li>
+            <li><a href="https://news.dmzj.com" title="新闻">新闻</a></li>
+            <li><a href="http://q.dmzj.com/" title="轻小说">轻小说</a></li>
+            <li><a href="http://bbs.dmzj.com" title="论坛">论坛</a></li>
+            <li><a href="https://www.dmzj.com/app/mobile.html" title="客户端">客户端</a></li>
+        </ul>
+
+        <a href="javascript:void(0);" class="searClose" onClick="m_global.closed('menuBar')"></a>
+    </div>
+
+    <!--导航入口 end-->
+
+    <div class="logo"><a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44"></a></div>
+    <!--<a href="#" title="" class="icon setup" onClick="m_global.Open('menuBar')"></a>-->
+    <a href="javascript:;" title="" class="icon serch" onClick="m_global.serchAction('serCh')"></a>
+    {% if not user %}
+    <a title="" class="icon head" onclick="m_global.headPhotoClick()">
+        <img style="display:none" src="/static/novel/images/photo.png" width="36" height="36" onerror="this.src='/static/novel/images/photo.png'">
+        <span class="tip" id="subscribe"></span></a>
+    {% else %}
+    <a class="user_name">
+        {{user.user_name}}
+    </a>
+    {% endif %}
+</div>
+
+<!--head end-->
+
+
+<ul class="nav autoHeight">
+    <li><a href="javascript:;" class="cur" title="推荐">推荐</a></li>
+    <li><a href="javascript:;" class="cur" title="收藏">收藏</a></li>
+    <!--<li><a href="/latest.html" title="更新">更新</a></li>
+    <li><a href="/classify.html" title="分类">分类</a></li>
+    <li><a href="/rank.html" title="排行">排行</a></li>
+    <li class="nobor"><a href="/subjectList.html" title="专题">专题</a></li>-->
+</ul>
+
+
+<!--焦点图-->
+
+<div class="main_visual" style="height:400px; background:#000">
+    <div class="flicking_con">
+        {% for recommend in recommends %}
+        <a href="#">0</a>
+        {% endfor %}
+       <!-- <a href="#">3</a>
+        <a href="#">4</a>-->
+    </div>
+    <div class="flicking_conTit">
+        {% for recommend in recommends %}
+        <span>{{ recommend.name }}</span>
+        {% endfor %}
+    </div>
+    <div class="main_image">
+        <ul>
+            {% for recommend in recommends %}
+            <li>
+                <a href="">
+                    <img src="{{ recommend.imag_url }}" width="100%" height="100%"/>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="/static/novel/script/IndexTouchSlider.js"></script>
+<!--
+<script>
+            $(function(){
+                updateRecommends(36)
+                m_global.navStyle(0);
+            })
+</script>
+-->
+<div style="display: flex;">
+    <a style="display: block;width: 50px;margin: 10px;margin-left: 62.5px;margin-right: 62.5px" href="/novel/rank">
+        <img src="/static/novel/images/排行.png" style="width: 40px;margin-left: 5px"></img>
+        <span style="width: 50px;display: inline-block;text-align: center;font-size: 12px;margin-top: 3px;">排行榜</span>
+    </a>
+    <a style="display: block;width: 50px;margin: 10px;margin-left: 62.5px;margin-right: 62.5px" href="/novel/latest">
+        <img src="/static/novel/images/最新.png" style="width: 40px;margin-left: 5px"></img>
+        <span style="width: 50px;display: inline-block;text-align: center;font-size: 12px;margin-top: 3px;">最近更新</span>
+    </a>
+    <a style="display: block;width: 50px;margin: 10px;margin-left: 62.5px;margin-right: 62.5px" href="/novel/finished">
+        <img src="/static/novel/images/完结.png" style="width: 40px;margin-left: 5px"></img>
+        <span style="width: 50px;display: inline-block;text-align: center;font-size: 12px;margin-top: 3px;">已完结</span>
+    </a>
+    <a style="display: block;width: 50px;margin: 10px;margin-left: 62.5px;margin-right: 62.5px" href="/novel/findRecommend">
+        <img src="/static/novel/images/发现.png" style="width: 40px;margin-left: 5px"></img>
+        <span style="width: 50px;display: inline-block;text-align: center;font-size: 12px;margin-top: 3px;">发现</span>
+    </a>
+</div>
+{% for novels in novellist %}
+<div class="imgBox">
+    <div class="Sub_H2">
+        <span class="icon"><img src="/static/novel/images/icon_h2_{{ forloop.counter }}.png"/></span>
+        <span class="Title">{{ novels.0 }}</span>
+        <span></span>
+    </div>
+    <ul class="col_3_1">
+        {% for novel in novels.1 %}
+        <li>
+            <a class="ImgA" href="/novel/getNovelInfo?infourl={{ novel.novel_url|safe }}&novelid={{novel.id}}">
+                <img class="novel_cover" src="{{ novel.cover|safe }}"  width="100%" />
+            </a>
+            <a class="txtA">{{ novel.name|safe }}</a>
+            <span class="info">作者:{{ novel.author|safe }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="Sub_H2"><span class="icon_More"></span></div>
+
+</div>
+{% endfor %}
+<script  type="text/javascript">
+    var index_page = new Array();
+    for(var i=0;i<6;i++){
+        index_page[i] = 0;
+    }
+    $('.imgBox .icon_More').click(function(){
+         $typenum=$('.imgBox .icon_More').index(this);
+         index_page[$typenum]++;
+         $.ajax({
+          url: '/novel/indexMore',
+          type: 'POST',
+          dataType: 'json',
+          data:{'page':index_page[$typenum],'typenum':$typenum,'csrfmiddlewaretoken':'{{csrf_token}}'},
+          success:function(data){
+          	novels=data.novels;
+          	$li='';
+          	 for (var i = novels.length - 1; i >= 0; i--) {
+                $li+='<li>'
+               +'<a class="ImgA" href="/novel/getNovelInfo?infourl='+novels[i].novel_url+'&novelid='+novels[i].id+'">'
+               +'<img class="novel_cover" src="'+novels[i].cover+'" width="100%"/>'
+               +'</a>'
+               +'<a class="txtA">'+novels[i].name+'</a>'
+               +'<span class="info">作者:'+novels[i].author+'</span>'
+               +'</li>';
+            };
+          	$('.col_3_1').eq($typenum).append($li);
+
+            $(".novel_cover").height($(".novel_cover").width()*1.25);
+            },
+           error:function(){
+               alert('服务器超时，请重试！');
+           }
+        });
+    })
+</script>
+
+
+<div class="bottom">
+
+    <div class="pageLine"><img src="/static/novel/images/head_line.gif" width="100%"></div>
+
+    <ul class="subNav">
+
+        <li><a href="javascript:history.go(-1)"><span class="a4">&lt;&lt;&lt;</span></a></li>
+
+        <li><a href="javascript:;"><span class="a5">下载客户端</span></a></li>
+
+        <li class="last"><a href="javascript:;" onClick="m_global.toTop()"><span class="a6">返回顶部&gt;&gt;&gt;</span></a></li>
+
+    </ul>
+
+
+    <p class="record">流溪阁在线小说 <a href="javascript:;">关于我们</a></p>
+
+
+</div>
+
+<script type="text/javascript">
+    $(".novel_cover").height($(".novel_cover").width()*1.25);
+</script>
+<script type="text/javascript">
+    $(".header .user_name").click(function(){
+        layui.use('layer',function(){
+            var layer = layui.layer;
+            layer.open({
+                title:['选项'],
+                content:'<button id="logout" class="layui-btn layui-btn-normal layui-btn-fluid" style="margin-bottom:10px;" onclick="logout()">退出登录</button>'+
+                        '<button class="layui-btn layui-btn-normal layui-btn-fluid" style="margin-left:0px;margin-bottom:10px;" onclick="mycollections()">我的收藏</button>'+
+                        '<button class="layui-btn layui-btn-normal layui-btn-fluid" style="margin-left:0px;margin-bottom:10px;" onclick="passwordChange()">修改密码</button>',
+                btn:['取消'],
+                btnAlign:'c',
+                resize:false
+            });
+        });
+    });
+    $("[title='收藏']").click(function(){
+        {% if user %}
+            location.href = "mycollections";
+        {% else %}
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('请先登录哦!');
+            });
+        {% endif %}
+    });
+</script>
+</body>
+
+</html>

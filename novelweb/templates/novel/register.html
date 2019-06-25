@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <meta name="Keywords" content="小说,在线小说,手机小说"/>
+    <title>注册</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css">
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+        .forminput {
+            font-size: 15px;
+            color: #9facba;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            margin-left: 20px;
+        }
+        .forminput span{
+            display: inline-block;
+            width: 120px;
+        }
+        .forminput input{
+            border:0.5px solid #9facba;
+            display:inline-block;
+            height:20px;
+            padding: 5px
+        }
+        .forminput button{
+            background-color: #D8D8D8;
+            color: black;
+            display: inline-block;
+            height: 30px;
+            width: 107px;
+            border: none;
+        }
+        .regbtn{
+            margin-top: 20px;
+        }
+        .regbtn a{
+            background-color: #00A7FF;
+            color: white;
+            display: inline-block;
+            height: 30px;
+            width: 172px;
+            line-height: 27px;
+            margin-left:60px;
+        }
+        .register {
+            overflow: hidden;
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44">
+            </a>
+        </div>
+    </div>
+    <div class="register">
+        <form style="overflow: hidden;">
+            <div style="width: 400px;margin: auto;">
+                <div class="forminput" style="margin-right: 180px;margin-bottom: 15px;font-size: 30px;color: #00A7FF">
+                    <span>注册</span>
+                </div>
+            
+                <div class="forminput">
+                    <span>用户名</span>
+                    <input type="text" name="username"/>
+                </div>
+            
+                <div class="forminput">
+                    <span>密码</span>
+                    <input type="password" name="password"/>
+                </div>
+
+                <div class="forminput">
+                    <span>确认密码</span>
+                    <input type="password" name="confirmpass"/>
+                </div>
+
+                <div class="forminput">
+                    <span>电子邮箱</span>
+                    <input type="text" name="Email"/>
+                </div>
+                <div class="forminput">
+                    <span>邮箱验证码</span>
+                    <input type="text" name="Emailverificationcode" style="width: 50px" />
+                    <button id="verificodebtn">获取验证码</button> 
+                </div>
+            </div>
+        </form>
+        <div class="regbtn">
+            <a href="#">立即注册</a>
+        </div>
+    </div>
+
+<script  type="text/javascript">
+    $("#verificodebtn").click(function(){
+        var Email = $("[name='Email']").val();
+        if(Email==""){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('请先填写邮箱');
+            });
+            return;
+        }
+        var reg = /^[\w\.]+@[\w\.]+(\.\w+)+$/;
+        if(!reg.test(Email)){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('邮箱格式错误');
+            });
+            return;
+        }
+        $("#verificodebtn").attr('disabled',true);
+        $("#verificodebtn").css('color','#999cb1');
+        var time = 60;
+        var timer = setInterval(function(){
+            if(time>0){
+                $("#verificodebtn").text('('+time+'s)重新发送');
+                time--;
+            }else{
+                $("#verificodebtn").text('获取验证码').removeAttr('disabled');
+                $("#verificodebtn").css('color','black');
+                clearInterval(timer);
+            }
+        },1000);
+        $.ajax({
+            url: '/novel/getverificode_register',
+            type: 'POST',
+            dataType: 'json',
+            data:{'Email':Email,'csrfmiddlewaretoken':'{{csrf_token}}'},
+            success:function(data){
+                status = data.status;
+                if(status=='成功'){
+                    layui.use('layer',function(){
+                        var layer = layui.layer;
+                        layer.msg('验证码已发送');
+                    });
+                }
+                else{
+                    layui.use('layer',function(){
+                        var layer = layui.layer;
+                        layer.msg('验证码发送失败');
+                    });
+                }
+            },
+            error:function(){
+               layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('服务器超时，请重试！');
+            });
+           }
+        });
+        
+        
+    });
+    $(".regbtn a").click(function(){
+        var username = $("[name='username']").val();
+        var password = $("[name='password']").val();
+        var confirmpass = $("[name='confirmpass']").val();
+        var Email = $("[name='Email']").val();
+        var Emailverificationcode = $("[name='Emailverificationcode']").val();
+        if(username==""||password==""||confirmpass==""||Email==""||Emailverificationcode=="") {
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('请填写完整');
+            });
+            return;
+        }
+        if (username.length>20) {
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('用户名超出限制');
+            });
+            return;
+        }
+        if(password.length<6||password.length>18){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('密码6-18位');
+            });
+            return;
+        }
+        if(confirmpass!=password){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('密码与确认密码不同');
+            });
+            return;
+        }
+        var reg = /^[\w\.]+@[\w\.]+(\.\w+)+$/;
+        if(!reg.test(Email)){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('邮箱格式错误');
+            });
+            return;
+        }
+        $.ajax({
+            url: '/novel/register',
+            type: 'POST',
+            dataType: 'json',
+            data:{'username':username,'password':password,'Email':Email,'Emailverificationcode':Emailverificationcode,'csrfmiddlewaretoken':'{{csrf_token}}'},
+            success:function(data){
+                status=data.status;
+                layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg(status);
+            });
+            },
+            error:function(){
+               layui.use('layer',function(){
+                var layer = layui.layer;
+                layer.msg('服务器超时，请重试！');
+            });
+           }
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="Keywords" content="小说,在线小说,手机小说"/>
+    <title>在线小说,手机小说,流溪阁小说网手机版</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/novel/script/common.js"></script>
+    <script type="text/javascript" src="/static/novel/script/domain.js"></script>
+    <script type="text/javascript" src="/static/novel/script/m_reader.js?201514416"></script>
+    <script type="text/javascript" src="/static/novel/script/TSB.js"></script>
+    <script type="text/javascript" src="/static/novel/script/main.js"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+    </style>
+</head>
+<body style="overflow: scroll;">
+
+
+
+<!--head-->
+
+<div class="header">
+    <div class="logo"><a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44"></a></div>
+</div>
+<ul class="layui-nav layui-bg-cyan" lay-filter="">
+  <li class="layui-nav-item"><a href="/novel/findRecommend">推荐</a></li>
+  <li class="layui-nav-item"><a href="/novel/findMsg">消息</a></li>
+  <li class="layui-nav-item layui-this"><a href="/novel/findCircle">圈子</a></li>
+</ul>
+<div style='display: flex;margin-top: 10px'>
+  <input type='text' name='comment' required lay-verify='required' placeholder='搜索...' autocomplete='off' class='layui-input search-input' style='width: 100%'>
+  <button class='layui-btn layui-btn-primary search' type='button' style="float: right;">提交</button>
+</div>
+<div class="layui-btn-container" style="margin: 15px">
+  {%for circle in circles%}
+  <button class="layui-btn layui-btn-xs layui-btn-radius circle">{{circle.circle_name}}</button>
+  {%endfor%}
+  <button class="layui-btn layui-btn-xs layui-btn-radius add-circle" style="width: 34px">+</button>
+  <button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal add-post" style="position: fixed;right: 400px;z-index: 100"><i class="layui-icon" style="margin-right: 0px">&#xe642;</i></button>
+</div>
+
+<div class="post-box">
+  {%for post_and_reply in posts_and_replys%}
+<div class="layui-card" style="margin-top: 15px;background-color: #e2e2e2">
+  <div class="layui-card-header">
+      <span>{{post_and_reply.0.title}}</span>
+      <!--<span class="layui-badge layui-bg-cyan" style="float: right;margin-top: 12px">创作</span>-->
+      <button class="layui-btn layui-btn-xs layui-btn-radius circle" style="float: right;margin-top: 12px">{{post_and_reply.0.circle.circle_name}}</button>
+  </div>
+  <div class="layui-card-body">
+    <div>
+      <span style="font-size: 10px;color: #959595;">{{post_and_reply.0.user.user_name}}</span>
+      <span style="font-size: 10px;color: #959595;float: right;">{{post_and_reply.0.pub_time}}</span>
+    </div>
+    <div>
+      <span style="font-size: 12px;color: #5f5f5f;">{{post_and_reply.0.content}}</span>
+    </div>
+    <div class="layui-btn-group" style="text-align: center;margin-top: 15px;width: 100%">
+      <button class="layui-btn layui-btn-primary layui-btn-sm post-praise"><i class="layui-icon layui-icon-praise"></i>({{post_and_reply.0.praise}})</button>
+      <button class="layui-btn layui-btn-primary layui-btn-sm post-reply"><i class="layui-icon layui-icon-reply-fill"></i>({{post_and_reply.2}})</button>
+      <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon layui-icon-share"></i>({{post_and_reply.0.shared}})</button>
+    </div>
+    <div style='display: none;' class="show-all-reply">
+    <div style='display: flex;margin-bottom: 10px;margin-top: 10px'>
+      <input type='text' name='comment' required lay-verify='required' placeholder='写下你的评论...' autocomplete='off' class='layui-input pub-reply-input' style='width: 100%'>
+      <button class='layui-btn layui-btn-primary pub-reply' type='button'>发布</button>
+    </div>
+    <div class='list-group'>
+      {%for reply in post_and_reply.1 %}
+      <div class='list-group-item'>
+      <div>
+        <span class='layui-badge-dot'></span>
+        <span>&ensp;{{reply.user.user_name}}</span><span style='float: right;color: #999'>{{reply.pub_time}}</span>
+      </div>
+        <div style='margin-top: 5px'>&ensp;&ensp;{{reply.content}}</div>
+        <div class='layui-btn-group' style='text-align: center;width: 100%'>
+          <button class='layui-btn layui-btn-primary layui-btn-sm reply-praise' style='border: none'><i class='layui-icon layui-icon-praise'></i>({{reply.praise}})</button>
+          <button class='layui-btn layui-btn-primary layui-btn-sm reply-check' style='border: none'><i class='layui-icon layui-icon-reply-fill'></i>查看回复</button>
+          <button class='layui-btn layui-btn-primary layui-btn-sm reply-reply' style='border: none'><i class='layui-icon layui-icon-edit'></i>回复</button>
+        </div>
+        <div style='display: none;' class='reply-box'>
+          <input type='text' name='comment' required lay-verify='required' placeholder='回复{{reply.user.user_name}}' autocomplete='off' class='layui-input reply-reply-input' style='width: 100%'>
+          <button class='layui-btn layui-btn-primary pub-reply-reply' type='button'>发布</button>
+        </div>
+        <div style='display:none' class='reply-id'>{{reply.id}}</div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+  </div>
+  <div style='display:none' class='post-id'>{{post_and_reply.0.id}}</div>
+</div>
+{%endfor%}
+</div>
+<div class="bottom">
+
+    <div class="pageLine"><img src="/static/novel/images/head_line.gif" width="100%"></div>
+
+    <ul class="subNav">
+
+        <li><a href="javascript:history.go(-1)"><span class="a4">&lt;&lt;&lt;</span></a></li>
+
+        <li><a href="javascript:;"><span class="a5">下载客户端</span></a></li>
+
+        <li class="last"><a href="javascript:;" onClick="m_global.toTop()"><span class="a6">返回顶部&gt;&gt;&gt;</span></a></li>
+
+    </ul>
+    <p class="record">流溪阁在线小说 <a href="javascript:;">关于我们</a></p>
+</div>
+<script type="text/javascript">
+  $('.add-circle').click(function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.open({
+          type:1,
+          title:'圈子',
+          content:"<div style='margin:15px'><form class='layui-form' action=''><div class='layui-form-item'><label class='layui-form-label'>圈子名</label><div class='layui-input-block'><input type='text' name='title' required  lay-verify='required' placeholder='请输入圈子名' autocomplete='off' class='layui-input circle-name'></div></div><div class='layui-form-item layui-form-text'><label class='layui-form-label'>说明</label><div class='layui-input-block'><textarea name='desc' placeholder='请输入圈子说明' class='layui-textarea interpretation'></textarea></div></div></form></div>",
+          area:['400px','350px'],
+          btn:['提交'],
+          btnAlign:'c',
+          yes:function(index,layero){
+            var name = $('.circle-name').val();
+            var interpretation = $('.interpretation').val();
+            if(name==''||interpretation==''){
+              layer.msg('请填写完整！');
+            }
+            else{
+              //layer.msg('圈子已被创建！');
+              $.ajax({
+                url: '/novel/createCircle',
+                type:'POST',
+                dataType:'json',
+                data:{'name':name,'interpretation':interpretation,'csrfmiddlewaretoken':'{{csrf_token}}'},
+                success:function(data){
+                  if(data.status=='成功'){
+                    layui.use('layer',function(){
+                      var layer = layui.layer;
+                      layer.msg('创建成功！');
+                    });
+                    layer.close(index);
+                  }
+                  else{
+                    layui.use('layer',function(){
+                      var layer = layui.layer;
+                      layer.msg('创建失败！圈子已存在！');
+                    });
+                  }
+                },
+                error:function(){
+
+                },
+              });
+            }
+          },
+          success:function(layero,index){
+           
+          },
+        });
+      });
+  });
+  $('.add-post').click(function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.open({
+          /*skin:'layui-layer-lan',*/
+          type:1,
+          title:'发布贴子',
+          content:"<div style='margin:15px'><form class='layui-form'><div class='layui-form-item'><label class='layui-form-label'>标题</label><div class='layui-input-block'><input type='text' name='title' required  lay-verify='required' placeholder='请输入标题' autocomplete='off' class='layui-input post-title'></div></div><div class='layui-form-item'><label class='layui-form-label'>圈子</label><div class='layui-input-block'><select class='circle-select' name='circle' lay-verify='required'><option value=''></option>{%for circle in circles%}<option value='{{circle.circle_name}}'>{{circle.circle_name}}</option>{%endfor%}</select></div></div><div class='layui-form-item layui-form-text'><label class='layui-form-label'>内容</label><div class='layui-input-block'><textarea name='desc' placeholder='请输入贴子内容' class='layui-textarea content'></textarea></div></div></form></div>",//select标签   class ='form-control' 
+          area:['400px','350px'],
+          btn:['提交'],
+          btnAlign:'c',
+          yes:function(index,layero){
+            var title = $('.post-title').val();
+            var content = $('.content').val();
+            var circle_name = $('.circle-select').val();
+            console.log(circle_name);
+            if(title==''||content==''||circle_name==''){
+              layer.msg('请填写完整！');
+            }
+            else{
+              $.ajax({
+                url: '/novel/pubPost',
+                type:'POST',
+                dataType:'json',
+                data:{'title':title,'content':content,'circle_name':circle_name,'csrfmiddlewaretoken':'{{csrf_token}}'},
+                success:function(data){
+                  if(data.status=='成功'){
+                    layui.use('layer',function(){
+                      var layer = layui.layer;
+                      layer.msg('发布成功！');
+                    });
+                    layer.close(index);
+                  }
+                  else{
+                    layui.use('layer',function(){
+                      var layer = layui.layer;
+                      layer.msg('发布失败！');
+                    });
+                  }
+                },
+                error:function(){
+
+                },
+              });
+            }
+          },
+          success:function(){
+            layui.use('form', function(){
+            var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
+  
+            //……
+  
+            //但是，如果你的HTML是动态生成的，自动渲染就会失效
+            //因此你需要在相应的地方，执行下述方法来手动渲染，跟这类似的还有 element.init();
+            form.render();
+            });  
+            $('.layui-layer-content').css('height','');
+          },
+        });
+      });
+  });
+  $('body').on('click','.post-praise',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var post_num = $('.layui-card .post-praise').index(this);
+    var praise_num = parseInt($('.layui-card .post-praise').eq(post_num).text().replace('(',''));
+    praise_num++;
+    var text = "<i class='layui-icon layui-icon-praise'></i>("+praise_num+")";
+    $('.layui-card .post-praise').eq(post_num).html(text);
+  });
+  $('body').on('click','.post-reply',function(){
+    //alert('回复');
+    var post_num = $('.layui-card .post-reply').index(this);
+    //$('.layui-card .layui-card-body').eq(post_num).append('<div>新增</div>');
+    if($('.show-all-reply').eq(post_num).css('display')=='none'){
+      $('.show-all-reply').eq(post_num).css('display','block');
+    }
+    else{
+      $('.show-all-reply').eq(post_num).css('display','none');
+    }
+  });
+  $('body').on('click','.pub-reply',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var post_num = $('.layui-card .pub-reply').index(this);
+    //alert(post_num);
+    var pub_reply_input = $('.layui-card .pub-reply-input').eq(post_num).val();
+    var post_id = $('.layui-card .post-id').eq(post_num).text();
+     if(pub_reply_input==''){
+      layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先填写内容哦！');
+      });
+      return;
+    }
+    else{
+      $.ajax({
+        url: '/novel/pubPostReply',
+        type:'POST',
+        dataType:'json',
+        data:{'content':pub_reply_input,'post_id':post_id,'csrfmiddlewaretoken':'{{csrf_token}}'},
+        success:function(data){
+          alert(data.status);
+          if(data.status=='成功'){
+            layui.use('layer',function(){
+              var layer = layui.layer;
+              layer.msg('发布成功！');
+            });
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
+            var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
+            var currentdate = date.getFullYear() + '年'  + month  + '月'  + strDate+ "日"  + date.getHours()  + seperator2  + date.getMinutes();
+            var str = "<div class='list-group-item'><div><span class='layui-badge-dot'></span><span>&ensp;{{user.user_name}}</span><span style='float: right;color: #999'>"+currentdate+"</span></div><div style='margin-top: 5px'>&ensp;&ensp;"+pub_reply_input+"</div><div class='layui-btn-group' style='text-align: center;width: 100%'><button class='layui-btn layui-btn-primary layui-btn-sm reply-praise' style='border: none'><i class='layui-icon layui-icon-praise'></i>(0)</button><button class='layui-btn layui-btn-primary layui-btn-sm reply-check' style='border: none'><i class='layui-icon layui-icon-reply-fill'></i>查看回复</button><button class='layui-btn layui-btn-primary layui-btn-sm reply-reply' style='border: none'><i class='layui-icon layui-icon-edit'></i>回复</button></div><div style='display: none;' class='reply-box'><input type='text' name='comment' required lay-verify='required' placeholder='回复{{user.user_name}}' autocomplete='off' class='layui-input reply-reply-input' style='width: 100%'><button class='layui-btn layui-btn-primary pub-reply-reply' type='button'>发布</button></div><div style='display:none' class='reply-id'>10000</div></div>";
+            $('.list-group').eq(post_num).append(str);
+            $('.layui-card .pub-reply-input').eq(post_num).val('');
+          }
+          else{
+            layui.use('layer',function(){
+              var layer = layui.layer;
+              layer.msg('发布失败！');
+            });
+          }
+        },
+        error:function(){
+
+        }
+      });
+    }
+  });
+  $('body').on('click','.reply-praise',function(){
+    //var post_num = $('.post-box .layui-card').index(this);
+    var reply_num = $('.list-group-item .reply-praise').index(this);
+    var praise_num = parseInt($('.list-group-item .reply-praise').eq(reply_num).text().replace('(',''));
+    praise_num++;
+    //alert(reply_num);
+    var text = "<i class='layui-icon layui-icon-praise'></i>("+praise_num+")";
+    $('.list-group-item .reply-praise').eq(reply_num).html(text);
+    //$(this).html('xxx');
+  });
+  $('body').on('click','.reply-check',function(){
+    var reply_num = $('.layui-card .reply-check').index(this);
+    var reply_id = $('.layui-card .reply-id').eq(reply_num).text();
+    $.ajax({
+      url: '/novel/getPostReplyReply',
+      type:'POST',
+      dataType:'json',
+      data:{'reply_id':reply_id,'csrfmiddlewaretoken':'{{csrf_token}}'},
+      success:function(data){
+        replys = data.replys;
+        str="";
+        for(var i=0;i<=replys.length-1;i++){
+          str+="<div class='list-group-item'><div><span class='layui-badge-dot'></span><span>&ensp;"+replys[i].user+"<i class='layui-icon layui-icon-triangle-r'></i>"+replys[i].user+"</span><span style='float: right;color: #999'>"+replys[i].pub_time+"</span></div><div style='margin-top: 5px'>&ensp;&ensp;"+replys[i].content+"</div><div class='layui-btn-group' style='text-align: center;width: 100%'><button class='layui-btn layui-btn-primary layui-btn-sm reply-praise' style='border: none'><i class='layui-icon layui-icon-praise'></i>("+replys[i].praise+")</button><button class='layui-btn layui-btn-primary layui-btn-sm reply-reply' style='border: none'><i class='layui-icon layui-icon-edit'></i>回复</button></div><div style='display: none;' class='reply-box'><input type='text' name='comment' required lay-verify='required' placeholder='回复"+replys[i].user+"' autocomplete='off' class='layui-input reply-reply-input' style='width: 100%'><button class='layui-btn layui-btn-primary pub-reply-reply' type='button'>发布</button></div><div style='display:none' class='reply-id'>"+replys[i].id+"</div></div>";
+        }
+        layui.use('layer',function(){
+      var layer = layui.layer;
+      layer.open({
+        type:1,
+        title:['回复'],
+        content:"<div class='list-group'></div>",
+        area:['600px','600px'],
+        success:function(layero, index){
+          layero.find('.layui-layer-btn').remove();
+          layero.find('.list-group').append(str);
+        },
+      });
+    });
+      },
+      error:function(){
+
+
+      },
+    });
+    
+  });
+  $('body').on('click','.reply-reply',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var reply_num = $('.list-group-item .reply-reply').index(this);
+    if($('.reply-box').eq(reply_num).css('display')=='none'){
+      $('.reply-box').eq(reply_num).css('display','flex');
+      $('.list-group-item .reply-reply').eq(reply_num).html("<i class='layui-icon layui-icon-edit'></i>取消回复");
+    }
+    else{
+      $('.reply-box').eq(reply_num).css('display','none');
+      $('.list-group-item .reply-reply').eq(reply_num).html("<i class='layui-icon layui-icon-edit'></i>回复");
+    }
+  });
+  $('body').on('click','.pub-reply-reply',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var reply_num = $('.list-group-item .pub-reply-reply').index(this);
+    var reply_reply_input = $('.list-group-item .reply-reply-input').eq(reply_num).val();
+    var reply_id = $('.list-group-item .reply-id').eq(reply_num).text();
+    if(reply_reply_input==''){
+      layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请输入内容哦！');
+      });
+    }else{
+      $.ajax({
+        url: '/novel/pubPostReplyReply',
+        type:'POST',
+        dataType:'json',
+        data:{'content':reply_reply_input,'reply_id':reply_id,'csrfmiddlewaretoken':'{{csrf_token}}'},
+        success:function(data){
+          if(data.status=='成功'){
+            layui.use('layer',function(){
+              var layer = layui.layer;
+              layer.msg('发布成功！');
+            });
+            $('.list-group-item .reply-reply-input').eq(reply_num).val('');
+          }
+          else{
+            layui.use('layer',function(){
+              var layer = layui.layer;
+              layer.msg('发布失败！');
+            });
+          }
+        },
+      });
+    }
+  });
+  $('.circle').click(function(){
+    var circle_name = $(this).text();
+    $.ajax({
+      url: '/novel/getCircle',
+      type:'POST',
+      dataType:'json',
+      data:{'circle_name':circle_name,'csrfmiddlewaretoken':'{{csrf_token}}'},
+      success:function(data){
+        interpretation = data.interpretation
+        if(data.is_joined=='是'){
+          var actBtn = '退出圈子' 
+        }
+        else{
+          var actBtn = '加入圈子' 
+        }
+        layui.use('layer',function(){
+          var layer = layui.layer;
+          layer.open({
+            type:1,
+            title:[circle_name],
+            content:"<div style='margin:20px'><span style='font-size: 12px;color: #5f5f5f;''>"+interpretation+"</span></div>",
+            area:['400px','400px'],
+            btn:[actBtn,'所有贴子'],
+            btnAlign:'c',
+            yes:function(index,layero){
+              $.ajax({
+                url: '/novel/joinCircle',
+                type:'POST',
+                dataType:'json',
+                data:{'circle_name':circle_name,'csrfmiddlewaretoken':'{{csrf_token}}'},
+                success:function(data){
+                  if(data.status=='请先登录哦！'){
+                    layer.msg(data.status);
+                    return;
+                  }
+                  location.href = "findCircle";
+                },
+                error:function(){},
+              });
+            },
+            btn2:function(){
+              location.href = "findCircle?circle="+circle_name;
+              //return false;
+            },
+            success:function(layero, index){
+              $('.layui-layer-content').css('height','304px');
+            },
+          });
+        });
+      },
+      error:function(){
+
+      },
+    });
+  });
+  $('.search').click(function(){
+    var search_input = $('.search-input').val();
+    if(search_input==''){
+      layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请输入搜索关键词！');
+      });
+    }else{
+      location.href = "findCircle?kw="+search_input;
+    }
+  });
+</script>
+</body>
+
+</html>

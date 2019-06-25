@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>{{ chaptername }}_流溪阁_在线小说阅读</title>
+    <meta name="Description"
+          content=""/>
+    <meta name="Keywords" content="流溪阁小说屋:好小说,为看小说的人而生"/>
+    <meta name="Author" content="流溪阁小说屋:好小说,为看小说的人而生"/>    <!-- 样式引用 -->
+    <meta name="referrer" content="never">
+
+
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/static/novel/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="http://css99tel.cdndm5.com/v201811191843/dm5/css/view.css"/>
+
+    <link rel="stylesheet" href="/static/novel/css/toPage.css">
+    <script src="/static/novel/script/jquery.min.js"></script>
+    <script src="/static/novel/script/toPage.js?2322"></script>
+    <script src="/static/novel/script/jquery.cookie.js" type="text/javascript"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+    </style>
+</head>
+<body class="white">
+<div class="view-header-2" style="overflow:visible;position: inherit;line-height:37px">
+    <!-- <a href="/manhua-zuidixianzhanan/" class="back">退出阅读</a> -->
+    <div class="title">
+        <a href="/novel/">首页</a>
+        <span class="right-arrow">
+        <a href="/novel/getNovelInfo?infourl={{infoUrl}}&novelid={{novelid}}" title="{{ novelname }}">{{novelname|safe}}</a>
+        </span>
+        <div class="rightToolBar" style="float:right;top: 0px;border: 0px solid #ccc;padding: 0px 0px; height: 41px;">
+            <a href="javascript:switchlight();" class="logo_5">
+
+            <div class="tip" id="lightTip">关灯</div>
+            </a>
+            <audio id='play_audio' controls src="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=5&text=" type="audio/mpeg">
+                <!---<source id='tts_source' >-->
+                <!--<embed style="height: 50px;width: 100px" src="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=1&text=播报内容">-->
+            </audio>
+        </div>
+
+    </div>
+    <div class="title">
+        <a href="/novel/preChapter?chapterUrl={{chapterUrl}}&infoUrl={{infoUrl}}&novelname={{novelname}}&chaptername={{ chaptername }}&novelid={{novelid}}">上一章</a>
+        <span class="active right-arrow"> {{ chaptername|safe }}</span>
+        <span class="right-arrow"><a
+                href="/novel/nextChapter?chapterUrl={{chapterUrl}}&infoUrl={{infoUrl}}&novelname={{novelname}}&chaptername={{ chaptername }}&novelid={{novelid}}">下一章</a></span>
+    </div>
+
+
+</div>
+
+
+<div class="page_container" style="text-align: left;width: 100%">
+    {{content|safe}}
+</div>
+<div class="view-header-2" style="overflow:visible;position: inherit;line-height:37px">
+    <div class="title">
+        <a href="/novel/preChapter?chapterUrl={{chapterUrl}}&infoUrl={{infoUrl}}&novelname={{novelname}}&chaptername={{ chaptername }}&novelid={{novelid}}">上一章</a>
+        <span class="active right-arrow"> {{ chaptername|safe }}</span>
+        <span class="right-arrow"><a
+                href="/novel/nextChapter?chapterUrl={{chapterUrl}}&infoUrl={{infoUrl}}&novelname={{novelname}}&chaptername={{ chaptername }}&novelid={{novelid}}">下一章</a></span>
+    </div>
+</div>
+
+
+<div class="alertTop_1" style="display: none;"><p id="alertTop_1"></p></div>
+<script type="text/javascript">
+    function getTextCount(item) {
+        $(item).parent().find('.red').text(180 - $(item).val().length);
+    }
+</script>
+<section class="modal-wrap" style="display: none;z-index:1000">
+    <div class="modal">
+        <div class="modal-body login-modal"><span class="close"><i class="icon icon-close"></i></span>
+            <h1>登录</h1>
+            <div class="account-login-form">
+                <div class="form-wrap"><p class="tip color-main"></p>
+                    <p><input name="txt_name" type="text" autocomplete="off" value="" placeholder="您的手机号／邮箱／用户名"></p>
+                    <p style="margin-bottom:15px;"><input name="txt_password" type="password" autocomplete="off"
+                                                          value="" placeholder="密码"></p>
+                    <p class="verify">
+
+                        <input type="hidden" name="txt_code" style="display:none"/></p>
+                    <p>
+                        <button id="btnLogin" class="button">立即登录</button>
+                    </p>
+                    <p class="options"><label><input name="remember" type="checkbox" value="1">自动登录</label> <span
+                            class="find-pwd"><a href="##">忘记密码？</a></span> <span class="tabs-link pull-right"><a
+                            class="" href="##">去注册</a></span></p></div>
+                <dl class="three" style="display:none">
+                    <dt>其他账号登录</dt>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-facebook.png"
+                                   alt=""></span></dd>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-vk.png" alt=""></span>
+                    </dd>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-ok.png" alt=""></span>
+                    </dd>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-instagram.png"
+                                   alt=""></span></dd>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-twitter.png"
+                                   alt=""></span></dd>
+                    <dd><span><img src="http://css99tel.cdndm5.com/v201811191843/dm5/images/account-icon-rss.png"
+                                   alt=""></span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript">
+    var mh_apkhost = "cnc.down.manhuaren.com";
+    if ($('body').hasClass('white')) {
+        $('.mato5').css({color: '#252525'});
+    } else {
+        $('.mato5').css({color: '#ffffff'});
+    }
+    var isLight=$.cookie('isLight')
+    if(isLight=='on'){
+            $.cookie('isLight', 'on', {path: '/', expires: 365});
+            $('.mato5').css({color: '#252525'});
+            $('#lightTip').text('关灯');
+    }else{
+            $('body').toggleClass('white');
+            $.cookie('isLight', 'off', {path: '/', expires: 365});
+            $('.mato5').css({color: '#ffffff'});
+            $('#lightTip').text('开灯');
+    }
+
+    function switchlight() {
+        $('body').toggleClass('white');
+        if ($('body').hasClass('white')) {
+            $.cookie('isLight', 'on', {path: '/', expires: 365});
+            $('.mato5').css({color: '#252525'});
+            $('#lightTip').text('关灯');
+        } else {
+            $.cookie('isLight', 'off', {path: '/', expires: 365});
+            $('.mato5').css({color: '#ffffff'});
+            $('#lightTip').text('开灯');
+        }
+    }
+
+    var play_audio = $('#play_audio');
+    var sections = new Array();
+    {% for section in sections %}
+    sections[{{forloop.counter0}}] = '{{section}}';
+    {% endfor %}
+    play_audio.attr('src',play_audio.attr('src')+sections[0]);
+    var play_time = 1;
+    play_audio.bind('ended', function(){  //监听audio结束事件，结束改变其src
+        play_audio.attr('src',"http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=5&text="+sections[play_time]);  
+        var myAuto = document.getElementById('play_audio');
+        myAuto.play();
+        play_time++;
+    });
+</script>
+
+
+</body>
+</html>

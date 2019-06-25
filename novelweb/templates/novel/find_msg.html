@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="Keywords" content="小说,在线小说,手机小说"/>
+    <title>在线小说,手机小说,流溪阁小说网手机版</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css">
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/novel/script/common.js"></script>
+    <script type="text/javascript" src="/static/novel/script/domain.js"></script>
+    <script type="text/javascript" src="/static/novel/script/m_reader.js?201514416"></script>
+    <script type="text/javascript" src="/static/novel/script/TSB.js"></script>
+    <script type="text/javascript" src="/static/novel/script/main.js"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+    </style>
+</head>
+<body style="overflow: scroll;">
+
+
+
+<!--head-->
+
+<div class="header">
+    <div class="logo"><a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44"></a></div>
+</div>
+<ul class="layui-nav layui-bg-cyan" lay-filter="">
+  <li class="layui-nav-item"><a href="/novel/findRecommend">推荐</a></li>
+  <li class="layui-nav-item layui-this"><a href="/novel/findMsg">消息</a></li>
+  <li class="layui-nav-item"><a href="/novel/findCircle">圈子</a></li>
+</ul>
+{%if not user%}
+<div>请先登录哦！</div>
+{%endif%}
+<div class="layui-collapse" style="margin-top: 15px;margin-bottom: 15px">
+  {%for message in messages%}
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">【{{message.msg_type}}】{{message.title}}<span style="float: right;">{{message.pub_time}}</span></h2>
+    <div class="layui-colla-content">{%autoescape off%}{{message.content}}{%endautoescape%}</div>
+  </div>
+  {%endfor%}
+</div>
+
+<div class="bottom">
+
+    <div class="pageLine"><img src="/static/novel/images/head_line.gif" width="100%"></div>
+
+    <ul class="subNav">
+
+        <li><a href="javascript:history.go(-1)"><span class="a4">&lt;&lt;&lt;</span></a></li>
+
+        <li><a href="javascript:;"><span class="a5">下载客户端</span></a></li>
+
+        <li class="last"><a href="javascript:;" onClick="m_global.toTop()"><span class="a6">返回顶部&gt;&gt;&gt;</span></a></li>
+
+    </ul>
+    <p class="record">流溪阁在线小说 <a href="javascript:;">关于我们</a></p>
+</div>
+<script>
+//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  //var element = layui.element;
+  
+  //…
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="Keywords" content="小说,在线小说,手机小说"/>
+    <title>在线小说,手机小说,流溪阁小说网手机版</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <!--<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/novel/script/common.js"></script>
+    <script type="text/javascript" src="/static/novel/script/domain.js"></script>
+    <script type="text/javascript" src="/static/novel/script/m_reader.js?201514416"></script>
+    <script type="text/javascript" src="/static/novel/script/TSB.js"></script>
+    <script type="text/javascript" src="/static/novel/script/main.js"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+    </style>
+</head>
+
+<body>
+
+
+
+<!--head-->
+
+<div class="header">
+    <div class="logo"><a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44"></a></div>
+</div>
+
+<div class="imgBox">
+    <div class="Sub_H2">
+        <span class="icon"><img src="/static/novel/images/icon_h2_1.png"/></span>
+        <span class="Title">{{catalog}}</span>
+        <span></span>
+    </div>
+    <ul class="col_3_1">
+        {% for novel in novel_list %}
+        <li>
+            <a class="ImgA" href="/novel/getNovelInfo?infourl={{ novel.novel_url|safe }}&novelid={{novel.id}}">
+                <img class="novel_cover" src="{{ novel.cover|safe }}" width="100%"/>
+            </a>
+            <a class="txtA">{{ novel.name|safe }}</a>
+            <span class="info">作者:{{ novel.author|safe }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</div>
+
+
+<div class="bottom">
+
+    <div class="pageLine"><img src="/static/novel/images/head_line.gif" width="100%"></div>
+
+    <ul class="subNav">
+
+        <li><a href="javascript:history.go(-1)"><span class="a4">&lt;&lt;&lt;</span></a></li>
+
+        <li><a href="javascript:;"><span class="a5">下载客户端</span></a></li>
+
+        <li class="last"><a href="javascript:;" onClick="m_global.toTop()"><span class="a6">返回顶部&gt;&gt;&gt;</span></a></li>
+
+    </ul>
+
+
+    <p class="record">流溪阁在线小说 <a href="javascript:;">关于我们</a></p>
+
+
+</div>
+<script type="text/javascript">
+    $(".novel_cover").height($(".novel_cover").width()*1.25);
+</script>
+</body>
+
+</html>

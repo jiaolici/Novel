@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="wap-font-scale" content="no">
+    <link href="/static/novel/images/logo_lxg.png" rel="apple-touch-icon-precomposed" />
+    <link href="/static/novel/images/logo_lxg.png" rel="icon" type="image/x-icon" />
+    <link href="/static/novel/images/logo_lxg.png" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="Keywords" content="小说,在线小说,手机小说"/>
+    <title>在线小说,手机小说,流溪阁小说网手机版</title>
+    <link href="/static/novel/css/global.css?2015111317" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="/static/novel/css/style.css?2015102217" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css">
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/novel/script/jquery.cookie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/novel/script/common.js"></script>
+    <script type="text/javascript" src="/static/novel/script/domain.js"></script>
+    <script type="text/javascript" src="/static/novel/script/m_reader.js?201514416"></script>
+    <script type="text/javascript" src="/static/novel/script/TSB.js"></script>
+    <script type="text/javascript" src="/static/novel/script/main.js"></script>
+    <style type="text/css">
+        @media (min-width: 1064px) {body {width: 700px;margin: 0 auto;}}
+    </style>
+</head>
+<body style="overflow: scroll;">
+
+
+
+<!--head-->
+
+<div class="header">
+    <div class="logo"><a href="/novel/"><img src="/static/novel/images/logo_lxg.png" width="105" height="44"></a></div>
+</div>
+<ul class="layui-nav layui-bg-cyan" lay-filter="">
+  <li class="layui-nav-item layui-this"><a href="/novel/findRecommend">推荐</a></li>
+  <li class="layui-nav-item"><a href="/novel/findMsg">消息</a></li>
+  <li class="layui-nav-item"><a href="/novel/findCircle">圈子</a></li>
+</ul>
+
+<div>
+<button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal add-recommend" style="position: fixed;right: 410px;top: 200px;z-index: 100"><i class="layui-icon" style="margin-right: 0px">&#xe642;</i></button>
+{%for recommend in recommends%}
+<div class="layui-card" style="margin-top: 15px;background-color: #e2e2e2">
+  <div class="layui-card-header">
+    <div>
+      <span class="layui-badge-dot"></span>
+      <a href="/novel/getNovelInfo?infourl={{recommend.novel.novel_url}}&novelid={{recommend.novel.id}}">《{{recommend.novel.name}}》</a>
+      <span style="float: right">{{recommend.novel.author}}</span>
+    </div>
+  </div>
+  <div class="layui-card-body">
+    <div>
+      <span style="font-size: 10px;color: #959595;">推荐人：{{recommend.user.user_name}}</span>
+      <span style="font-size: 10px;color: #959595;float: right;">{{recommend.pub_time}}</span>
+    </div>
+    <div>
+      <span style="font-size: 12px;color: #5f5f5f;">推荐理由：{{recommend.reason}}</span>
+    </div>
+    <div class="layui-btn-group" style="text-align: center;margin-top: 15px;width: 100%">
+      <button class="layui-btn layui-btn-primary layui-btn-sm praise"><i class="layui-icon layui-icon-praise"></i>(0)</button>
+      <button class="layui-btn layui-btn-primary layui-btn-sm tread"><i class="layui-icon layui-icon-tread"></i>(0)</button>
+    </div>
+  </div>
+</div>
+{%endfor%}
+</div>
+
+<div class="bottom">
+
+    <div class="pageLine"><img src="/static/novel/images/head_line.gif" width="100%"></div>
+
+    <ul class="subNav">
+
+        <li><a href="javascript:history.go(-1)"><span class="a4">&lt;&lt;&lt;</span></a></li>
+
+        <li><a href="javascript:;"><span class="a5">下载客户端</span></a></li>
+
+        <li class="last"><a href="javascript:;" onClick="m_global.toTop()"><span class="a6">返回顶部&gt;&gt;&gt;</span></a></li>
+
+    </ul>
+    <p class="record">流溪阁在线小说 <a href="javascript:;">关于我们</a></p>
+</div>
+<script type="text/javascript">
+  $('body').on('click','.praise',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var recommend_num = $('.layui-card .praise').index(this);
+    var praise_num = parseInt($('.layui-card .praise').eq(recommend_num).text().replace('(',''));
+    praise_num++;
+    var text = "<i class='layui-icon layui-icon-praise'></i>("+praise_num+")";
+    $('.layui-card .praise').eq(recommend_num).html(text);
+  });
+  $('body').on('click','.tread',function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    var recommend_num = $('.layui-card .tread').index(this);
+    var tread_num = parseInt($('.layui-card .tread').eq(recommend_num).text().replace('(',''));
+    tread_num++;
+    var text = "<i class='layui-icon layui-icon-tread'></i>("+tread_num+")";
+    $('.layui-card .tread').eq(recommend_num).html(text);
+  });
+  $('.add-recommend').click(function(){
+    {% if not user %}
+    layui.use('layer',function(){
+        var layer = layui.layer;
+        layer.msg('请先登录哦！');
+      });
+    return;
+    {% endif %}
+    layui.use('layer',function(){
+      var layer = layui.layer;
+      layer.open({
+        type: 1,
+        title: '推荐',
+        content: "<div style='margin:15px'><div class='layui-form-item'><label class='layui-form-label'>小说名</label><div class='layui-input-block'><input type='text' name='title' required  lay-verify='required' placeholder='请输入小说名' autocomplete='off' class='layui-input novel-name'></div></div><div class='layui-form-item'><label class='layui-form-label'>作者</label><div class='layui-input-block'><input type='text' name='title' required  lay-verify='required' placeholder='请输入作者' autocomplete='off' class='layui-input novel-author'></div></div><div class='layui-form-item layui-form-text'><label class='layui-form-label'>推荐理由</label><div class='layui-input-block'><textarea name='desc' placeholder='请输入推荐理由' class='layui-textarea reason'></textarea></div></div></div>",
+        area:['400px','350px'],
+        btn:['提交'],
+        btnAlign:'c',
+        yes:function(index,layero){
+          var name = $('.novel-name').val();
+          var author = $('.novel-author').val();
+          var reason = $('.reason').val();
+          if(name==''||author==''||reason==''){
+            layer.msg('请填写完整！');
+          }
+          else{
+            $.ajax({
+              url: '/novel/pubRecommend',
+                type:'POST',
+                dataType:'json',
+                data:{'novel_name':name,'author':author,'reason':reason,'csrfmiddlewaretoken':'{{csrf_token}}'},
+                success:function(data){
+                  layer.msg(data.msg);
+                  if(data.msg=='发布成功！'){
+                    location.href = "findRecommend";
+                  }
+                },
+            });
+          }
+        },
+        success:function(){
+          $('.layui-layer-content').css('height','250px');
+        },
+      });
+    });
+
+  });
+</script>
+</body>
+
+</html>

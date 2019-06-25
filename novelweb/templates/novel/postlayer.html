@@ -1,0 +1,21 @@
+<div style='margin:15px'>
+    <div class='layui-form-item'>
+        <label class='layui-form-label'>标题</label>
+        <div class='layui-input-block'>
+            <input type='text' name='title' required  lay-verify='required' placeholder='请输入标题' autocomplete='off' class='layui-input post-title'></div>
+    </div>
+    <div class='layui-form-item'>
+        <label class='layui-form-label'>圈子</label>
+        <div class='layui-input-block'>
+            <select name='circle' class ='form-control'lay-verify='required'>
+                <option value=''></option>
+                {% for option in options %}
+                <option value={{option.key}}>{{option.txt}}</option>
+                {% endfor %}
+            </select></div>
+    </div>
+    <div class='layui-form-item layui-form-text'>
+        <label class='layui-form-label'>内容</label>
+        <div class='layui-input-block'>
+            <textarea name='desc' placeholder='请输入贴子内容' class='layui-textarea content'>
+            </textarea></div></div></div>
